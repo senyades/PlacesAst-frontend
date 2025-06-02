@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Excursions.scss';
 
-const Excursions1 = () => {
+const Excursions8 = () => {
   const navigate = useNavigate();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -11,13 +11,13 @@ const Excursions1 = () => {
   const [volume, setVolume] = useState(0.7);
 
   // URL аудиофайла для этой экскурсии
-  const audioUrl = '';
+  const audioUrl = '/audio/Khosheutovsky-Khurul.mp3';
 
   const handleStartTest = () => {
     if (audioRef.current) {
       audioRef.current.pause();
     }
-    navigate('/test/1');
+    navigate('/test/8');
   };
 
   const togglePlay = () => {
@@ -68,17 +68,16 @@ const Excursions1 = () => {
   return (
     <div className="tour-page">
       <header className="tour-header">
-        <h2>Астраханский кремль</h2>
+        <h2>Хошеутовский Хурул</h2>
       </header>
 
       <div className="viewer-container">
-        <iframe
-         width="90%" 
+        <iframe 
+          width="90%" 
           height="500px" 
-          src="https://astmuseum.ru/ru/virtualnyy-tur/astrakhanskiy-kreml/" // <-- Заменить на реальный 3D-URL
-          title="Исторический центр Москвы"
-          frameBorder="0"
-          allowFullScreen
+          allowFullScreen="true" 
+          allow="accelerometer; magnetometer; gyroscope" 
+          src="https://panoraven.com/en/embed/rGGR6sHPoS"
         ></iframe>
       </div>
 
@@ -142,4 +141,4 @@ const Excursions1 = () => {
   );
 };
 
-export default Excursions1;
+export default Excursions8;

@@ -7,10 +7,12 @@ import Excursions1 from './components/Excursions/Excursions1';
 import Excursions2 from './components/Excursions/Excursions2';
 import Excursions3 from './components/Excursions/Excursions3';
 import Excursions4 from './components/Excursions/Excursions4';
+import Excursions8 from './components/Excursions/Excursions8';
 import TestPage from './components/Tests/Test1';
 import TestPage2 from './components/Tests/Test2';
 import TestPage3 from './components/Tests/Test3';
 import TestPage4 from './components/Tests/Test4';
+import TestPage8 from './components/Tests/Test8';
 import AdminPage from './components/Adminpage/AdminPage';
 
 // Защита для авторизованных пользователей
@@ -34,10 +36,12 @@ const App = () => {
         <Route path="/tour/2" element={<Excursions2 />} />
         <Route path="/tour/3" element={<Excursions3 />} />
         <Route path="/tour/4" element={<Excursions4 />} />
+         <Route path="/tour/8" element={<Excursions8 />} />
         <Route path="/test/1" element={<TestPage />} />
         <Route path="/test/2" element={<TestPage2 />} />
         <Route path="/test/3" element={<TestPage3 />} />
         <Route path="/test/4" element={<TestPage4 />} />
+        <Route path="/test/8" element={<TestPage8 />} />
         <Route path="/register" element={<RegisterPage />} />
         
         <Route 
