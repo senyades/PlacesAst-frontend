@@ -5,6 +5,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fbfc;
   color: #2c3e50;
+  position: relative;
 
   h2 {
     text-align: center;
@@ -83,5 +84,61 @@
       background-color: #bdc3c7;
       cursor: not-allowed;
     }
+  }
+
+  .achievement-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .popup-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 0.3s ease-out;
+
+      h3 {
+        color: #27ae60;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      button {
+        background-color: #27ae60;
+        color: white;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+          background-color: #219653;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

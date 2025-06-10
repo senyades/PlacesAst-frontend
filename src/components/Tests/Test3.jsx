@@ -33,6 +33,19 @@ const testQuestions = {
   ]
 };
 
+const AchievementPopup = ({ onClose }) => {
+  return (
+    <div className="achievement-popup">
+      <div className="popup-content">
+        <div className="achievement-icon">🕉️</div>
+        <h3>Поздравляем!</h3>
+        <p>Вы получили достижение "Знаток буддийской культуры калмыков"</p>
+        <button onClick={onClose}>Отлично!</button>
+      </div>
+    </div>
+  );
+};
+
 const TestPage = () => {
   const testIdNumber = 3; // ID теста — буддийская культура калмыков
   const questions = testQuestions[testIdNumber] || [];
@@ -41,6 +54,7 @@ const TestPage = () => {
   const [answers, setAnswers] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [score, setScore] = useState(null);
+  const [showAchievement, setShowAchievement] = useState(false);
 
   useEffect(() => {
     setAnswers(Array(questions.length).fill(null));
@@ -89,12 +103,23 @@ const TestPage = () => {
       setScore(correctCount);
       setSubmitted(true);
 
-      alert(`Тест завершён! Баллов: ${correctCount} из ${questions.length}`);
-      navigate('/dashboard');
+      // Показываем попап только при первом прохождении
+      if (!isAlreadyPassed) {
+        setShowAchievement(true);
+      } else {
+        alert(`Тест завершён! Баллов: ${correctCount} из ${questions.length}`);
+        navigate('/dashboard');
+      }
     } catch (err) {
       console.error('Ошибка при отправке результата:', err);
       alert('Ошибка при сохранении результата теста.');
     }
+  };
+
+  const closeAchievementPopup = () => {
+    setShowAchievement(false);
+    alert(`Тест завершён! Баллов: ${score} из ${questions.length}`);
+    navigate('/dashboard');
   };
 
   return (
@@ -136,6 +161,8 @@ const TestPage = () => {
           Завершить тест
         </button>
       )}
+
+      {showAchievement && <AchievementPopup onClose={closeAchievementPopup} />}
     </div>
   );
 };
