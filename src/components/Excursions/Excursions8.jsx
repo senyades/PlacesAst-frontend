@@ -71,7 +71,11 @@ const Excursions8 = () => {
         <h2>Хошеутовский Хурул</h2>
       </header>
 
+<<<<<<< HEAD
          <div className="viewer-container">
+=======
+      <div className="viewer-container">
+>>>>>>> 4f6622ca5436ceb8df2f696ebfc4f8a71fb5eee8
         <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/pXMeX8is1q"></iframe>
       </div>
 
