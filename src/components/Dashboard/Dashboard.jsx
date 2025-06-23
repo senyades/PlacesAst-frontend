@@ -76,6 +76,9 @@ const Dashboard = () => {
       const userData = JSON.parse(storedUser);
       setUser(userData);
 
+      console.log(userData.test_info)
+
+
       const enrichedTours = tourList.map(tour => {
         const testInfo = userData.test_info?.find(t => t.testid === tour.id);
         return {

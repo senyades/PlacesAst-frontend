@@ -11,7 +11,7 @@ const Excursions1 = () => {
   const [volume, setVolume] = useState(0.7);
 
   // URL аудиофайла для этой экскурсии
-  const audioUrl = '';
+  const audioUrl = '/audio/Astrakhan_Kremlin.mp4';
 
   const handleStartTest = () => {
     if (audioRef.current) {
