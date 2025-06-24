@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Excursions.scss';
 
-const Excursions8 = () => {
+const Excursions1 = () => {
   const navigate = useNavigate();
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -11,13 +11,13 @@ const Excursions8 = () => {
   const [volume, setVolume] = useState(0.7);
 
   // URL аудиофайла для этой экскурсии
-  const audioUrl = '/audio/Khosheutovsky-Khurul.mp3';
+const audioUrl = '/audio/Khosheutovsky-Khurul.mp3';
 
   const handleStartTest = () => {
     if (audioRef.current) {
       audioRef.current.pause();
     }
-    navigate('/test/8');
+    navigate('/test/2');
   };
 
   const togglePlay = () => {
@@ -68,14 +68,10 @@ const Excursions8 = () => {
   return (
     <div className="tour-page">
       <header className="tour-header">
-        <h2>Хошеутовский Хурул</h2>
+        <h2>Хашеутовский хурул</h2>
       </header>
 
-<<<<<<< HEAD
-         <div className="viewer-container">
-=======
       <div className="viewer-container">
->>>>>>> 4f6622ca5436ceb8df2f696ebfc4f8a71fb5eee8
         <iframe width="90%" height="500px" allowFullScreen="true" allow="accelerometer; magnetometer; gyroscope" src="https://panoraven.com/en/embed/pXMeX8is1q"></iframe>
       </div>
 
@@ -139,4 +135,4 @@ const Excursions8 = () => {
   );
 };
 
-export default Excursions8;
+export default Excursions1;
