@@ -11,7 +11,7 @@ const Excursions1 = () => {
   const [volume, setVolume] = useState(0.7);
 
   // URL аудиофайла для этой экскурсии
-  const audioUrl = '/audio/Kraevedchesky Museum.mp4';
+  const audioUrl = '/audio/Kraevedchesky-Museum.mp3';
 
   const handleStartTest = () => {
     if (audioRef.current) {

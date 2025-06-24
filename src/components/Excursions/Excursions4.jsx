@@ -12,7 +12,7 @@ const Excursions4 = () => {
   return (
     <div className="tour-page">
       <header className="tour-header">
-        <h2>Буддийская культура калмыков</h2>
+        <h2>Фауна волги</h2>
       </header>
 
       <div className="viewer-container">
